@@ -161,6 +161,10 @@ while playAgain == True:
 
 
 
+#=================================================================================================
+
+below is code to be added later if we want continuous play with a deck of 52 cards 
+
     # for i in range(0,52):
     #
     #     dealerHand.append(drawCard(deck,cardsInPlay))
