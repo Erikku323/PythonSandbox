@@ -88,6 +88,28 @@ def checkConstraints(heading,x,y,dist):
         else:
             #print("I have hit a wall")
             dist = dist - 1
+            
+       
+#incomplete function to do the same thing as above but with any angle
+def angleCheckConstraint(x,y,dist,angle):
+
+    #dist = c
+    #b = X dist
+    #a = y dist
+    rads = angle * (math.pi / 180)
+
+    b = dist * math.sin(rads)
+
+    a = math.sqrt(pow(dist, 2) + pow(b, 2))
+    position = [a,b]
+    return
+
+
+
+
+
+
+     
 
 
 
