@@ -1,3 +1,4 @@
+import math
 #Demonstrates a Random walk with changing colors The Turtle is constrained to the boundries set by the window and will not go outside
 
 
@@ -128,27 +129,26 @@ def angleCheckConstraint(x,y,dist,angle):
 # Set Variables and Objects
 
 timmy = Turtle()
-frank = Turtle()
 screen = Screen()
 timmy.shape("circle")
-frank.shape("square")
+turtle.colormode(255)
+timmy.pensize(15)
 #main Drawing Code-------------------------------
 
 #timmy.dot(20,)
 
-timmy.speed(0)
-timmy.pensize(20)
-frank.speed(0)
-frank.pensize(20)
+
 hitboundry = 0
 #screen.screensize(400,400)
 print(screen.screensize())
 timmy.setheading(270)
 while True:
-    newColor(timmy)
-    newColor(frank)
-    timmy.speed(0)
-    randHeadingWalk(timmy,50)
+   r = random.randint(0,255)
+   g = random.randint(0,255)
+   b = random.randint(0,255)
+   timmy.pencolor(r,g,b)
+   timmy.speed(0)
+   randHeadingWalk(timmy,50)
 
 
 
