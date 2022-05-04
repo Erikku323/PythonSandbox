@@ -1,0 +1,45 @@
+#Simple Program where turtles race each other
+
+
+from turtle import Turtle , Screen
+import random
+turtles = []
+colors = ["red","blue","green","yellow","purple","black"]
+screen = Screen()
+y = screen.canvheight - 500
+
+
+def newTurtle():
+    turtles.append(Turtle())
+    index = len(turtles) - 1
+    y = (index - 1) * 40
+    turtles[index].shape("turtle")
+    turtles[index].color(colors[index])
+    turtles[index].penup()
+    turtles[index].goto(-screen.canvwidth,y)
+def Race():
+    for i in range(len(turtles)):
+        turtles[i].forward(random.randint(0,30))
+        if turtles[i].xcor() > screen.canvwidth:
+            print(colors[i] + " Has Won!")
+            return True
+    return  False
+
+for i in colors:
+    newTurtle()
+
+#user_bet = screen.textinput(title="Make your Bet",prompt="Which turtle will win pick a color :")
+
+winner = False
+while winner == False:
+    winner = Race()
+
+
+
+
+
+screen.exitonclick()
+
+
+
+
